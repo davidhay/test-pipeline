@@ -1,12 +1,12 @@
-package com.example.testpipeline;
+package com.example.module1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class ExampleTest {
+public class ExampleModule1Test {
 
-  Example example = new Example();
+  ExampleModule1 example = new ExampleModule1();
 
   @Test
   void testThree(){

@@ -121,7 +121,12 @@ pipeline {
     }
     post {
         always {
-          recordCoverage(tools: [[parser: 'JACOCO']])
+          jacoco(
+            execPattern: 'report/**/*.exec',
+            classPattern: '**/target/classes',
+            sourcePattern: 'src/main/java',
+            exclusionPattern: 'src/test*
+            )
         }
         success {
             echo "BUILD SUCCESS : Recording Artifacts.."

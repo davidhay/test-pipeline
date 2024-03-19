@@ -1,6 +1,6 @@
-package com.example.testpipeline;
+package com.example.module1;
 
-public class Example {
+public class ExampleModule1 {
 
   String method1(String param){
     return param;
