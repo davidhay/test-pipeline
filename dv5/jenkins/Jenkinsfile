@@ -122,7 +122,7 @@ pipeline {
     post {
         always {
           jacoco(
-            execPattern: 'report/**/*.exec',
+            execPattern: '**/*.exec',
             classPattern: '**/target/classes',
             sourcePattern: 'src/main/java',
             exclusionPattern: 'src/test*'
@@ -131,8 +131,9 @@ pipeline {
         success {
             echo "BUILD SUCCESS : Recording Artifacts.."
             sh 'mkdir -p artifacts'
-            sh 'mv target/test-pipeline-0.0.1-SNAPSHOT.jar artifacts/test-pipeline.jar'
-            archiveArtifacts artifacts: 'artifacts/test-pipeline.jar', fingerprint: true
+            sh 'mv target/module2-0.0.1-SNAPSHOT.jar artifacts/module2.jar'
+            sh 'mv target/module3-0.0.1-SNAPSHOT.jar artifacts/module3.jar'
+            archiveArtifacts artifacts: 'artifacts/module2.jar, artifacts/module3.jar', fingerprint: true
         }
     }
 }
