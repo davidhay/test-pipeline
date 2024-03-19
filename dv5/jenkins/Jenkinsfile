@@ -126,7 +126,7 @@ pipeline {
         success {
             echo "BUILD SUCCESS : Recording Artifacts.."
             sh 'mkdir -p artifacts'
-            sh 'mv target/test-pipeline--0.0.1-SNAPSHOT.jar artifacts/test-pipeline.jar'
+            sh 'mv target/test-pipeline-0.0.1-SNAPSHOT.jar artifacts/test-pipeline.jar'
             archiveArtifacts artifacts: 'artifacts/test-pipeline.jar', fingerprint: true
         }
     }
