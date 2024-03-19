@@ -132,7 +132,7 @@ pipeline {
             echo "BUILD SUCCESS : Recording Artifacts.."
             sh 'mkdir -p artifacts'
             sh 'mv module2/target/module2-0.0.1-SNAPSHOT.jar artifacts/module2.jar'
-            sh 'mv module3/target/module2-0.0.1-SNAPSHOT.jar artifacts/module3.jar'
+            sh 'mv module3/target/module3-0.0.1-SNAPSHOT.jar artifacts/module3.jar'
             archiveArtifacts artifacts: 'artifacts/module2.jar, artifacts/module3.jar', fingerprint: true
         }
     }
