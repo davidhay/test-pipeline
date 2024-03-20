@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 public class JavaVersionTest {
 
   @Test
-  void testJavaVersionIs17() {
-    String expectedVersion = "17";
+  void testJavaVersionIs21() {
+    int expectedVersion = 21;
     Runtime.Version runtimeVersion = Runtime.version();
-    String version = String.valueOf(runtimeVersion.version().get(0));
+    int version = runtimeVersion.version().getFirst();
     Assertions.assertThat(version).isEqualTo(expectedVersion);
   }
 
