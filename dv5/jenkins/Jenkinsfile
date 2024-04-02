@@ -87,8 +87,8 @@ pipeline {
                   }
                   sh './mvnw integration-test -Dskip.unit.tests -Dmaven.main.skip'
                   sh './mvnw ouch'
+                  junit '**/failsafe-reports/*IT.xml'
                 }
-                junit '**/failsafe-reports/*IT.xml'
             }
         }
         stage('Install') {
