@@ -73,7 +73,6 @@ pipeline {
                     return;
                   }
                   sh './mvnw test'
-                  sh './mvnw ouch'
                 }
                 junit '**/surefire-reports/*Test.xml'
             }
