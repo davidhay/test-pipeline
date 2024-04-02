@@ -86,7 +86,6 @@ pipeline {
                     return;
                   }
                   sh './mvnw integration-test -Dskip.unit.tests -Dmaven.main.skip'
-                  sh './mvnw ouch'
                 }
                 junit (allowEmptyResults: true, testResults: '**/failsafe-reports/*IT.xml')
             }
