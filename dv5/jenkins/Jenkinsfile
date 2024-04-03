@@ -58,6 +58,11 @@ pipeline {
               sh 'curl --silent -XGET --unix-socket /var/run/docker.sock http://localhost/info | jq'
            }
         }
+        stage('Check Java' ) {
+            steps {
+                sh 'java -version'
+            }
+        }
         stage('Check TimeZone is Europe/London' ) {
             steps {
                 sh 'date; [ "${TZ}" = "Europe/London" ];'
