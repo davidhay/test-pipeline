@@ -60,7 +60,7 @@ pipeline {
         }
         stage('Check TimeZone is Europe/London' ) {
             steps {
-                sh '[ $(cat /etc/timezone) == "Europe/London" ]'
+                sh '[ $(cat /etc/timezone) = "Europe/London" ]'
             }
         }
         stage('Compile') {
